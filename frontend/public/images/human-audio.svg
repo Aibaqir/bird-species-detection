@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Human audio detection</title>
+  <desc id="desc">A human silhouette with sound waves for non-bird audio results.</desc>
+  <rect width="640" height="640" fill="#e9f3ec"/>
+  <circle cx="320" cy="226" r="92" fill="#07533a"/>
+  <path d="M154 548c20-116 90-180 166-180s146 64 166 180H154z" fill="#078546"/>
+  <path d="M478 247c22 20 34 46 34 73s-12 53-34 73" fill="none" stroke="#07533a" stroke-width="24" stroke-linecap="round"/>
+  <path d="M527 190c40 35 62 81 62 130s-22 95-62 130" fill="none" stroke="#078546" stroke-width="22" stroke-linecap="round" opacity=".75"/>
+  <path d="M162 247c-22 20-34 46-34 73s12 53 34 73" fill="none" stroke="#07533a" stroke-width="24" stroke-linecap="round"/>
+  <path d="M113 190c-40 35-62 81-62 130s22 95 62 130" fill="none" stroke="#078546" stroke-width="22" stroke-linecap="round" opacity=".75"/>
+  <circle cx="320" cy="214" r="28" fill="#e9f3ec" opacity=".45"/>
+  <path d="M254 542h132" stroke="#e9f3ec" stroke-width="20" stroke-linecap="round" opacity=".55"/>
+</svg>

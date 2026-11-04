@@ -1,0 +1,6 @@
+tensorflow==2.18.0
+tensorflow-intel==2.18.0
+birdnet==0.2.16
+tensorflow-datasets==4.9.7
+kagglehub==0.3.13
+importlib_resources==7.1.0

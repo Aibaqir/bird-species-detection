@@ -1,0 +1,190 @@
+{
+  "architecture": "mobilenetv2 transfer learning",
+  "source": "Local folder: D:\\AFYP\\datasets\\inaturalist_birds",
+  "preprocessing": "raw",
+  "image_size": [
+    224,
+    224
+  ],
+  "labels": [
+    "AMERICAN ROBIN",
+    "BALD EAGLE",
+    "BARN SWALLOW",
+    "BLUE JAY",
+    "CANADA GOOSE",
+    "COMMON RAVEN",
+    "EUROPEAN STARLING",
+    "GREAT BLUE HERON",
+    "HOUSE SPARROW",
+    "MALLARD",
+    "MOURNING DOVE",
+    "NORTHERN CARDINAL",
+    "RED-TAILED HAWK",
+    "ROCK PIGEON",
+    "SNOWY EGRET"
+  ],
+  "class_counts": {
+    "AMERICAN ROBIN": 35,
+    "BALD EAGLE": 35,
+    "BARN SWALLOW": 35,
+    "BLUE JAY": 34,
+    "CANADA GOOSE": 35,
+    "COMMON RAVEN": 35,
+    "EUROPEAN STARLING": 35,
+    "GREAT BLUE HERON": 35,
+    "HOUSE SPARROW": 35,
+    "MALLARD": 35,
+    "MOURNING DOVE": 35,
+    "NORTHERN CARDINAL": 35,
+    "RED-TAILED HAWK": 35,
+    "ROCK PIGEON": 35,
+    "SNOWY EGRET": 35
+  },
+  "augmentation": [
+    "rotation",
+    "zoom",
+    "horizontal_flip",
+    "brightness",
+    "contrast"
+  ],
+  "regularization": [
+    "dropout",
+    "batch_normalization",
+    "early_stopping",
+    "reduce_lr_on_plateau",
+    "class_weights"
+  ],
+  "splits": {
+    "train": "training",
+    "validation": "validation",
+    "test": "held-out test"
+  },
+  "training_args": {
+    "source": "folder",
+    "data_dir": "D:\\AFYP\\datasets\\inaturalist_birds",
+    "kaggle_dataset": "gpiosenka/100-bird-species",
+    "output_model": "models\\BirdsModel_realworld.keras",
+    "backbone": "mobilenetv2",
+    "image_size": 224,
+    "batch_size": 16,
+    "epochs": 6,
+    "fine_tune_epochs": 4,
+    "learning_rate": 0.001,
+    "fine_tune_learning_rate": 1e-05,
+    "fine_tune_layers": 40,
+    "dropout": 0.35,
+    "validation_split": 0.15,
+    "test_split": 0.15,
+    "seed": 1337,
+    "min_images_per_class": 20
+  },
+  "history": {
+    "frozen_backbone": {
+      "accuracy": [
+        0.1820652186870575,
+        0.46195653080940247,
+        0.6304348111152649,
+        0.7146739363670349,
+        0.7527173757553101,
+        0.820652186870575
+      ],
+      "loss": [
+        3.1112043857574463,
+        1.8231849670410156,
+        1.1386131048202515,
+        0.8971939086914062,
+        0.7678459286689758,
+        0.5574759840965271
+      ],
+      "top_3_accuracy": [
+        0.3804347813129425,
+        0.7228260636329651,
+        0.85597825050354,
+        0.9130434989929199,
+        0.9347826242446899,
+        0.967391312122345
+      ],
+      "val_accuracy": [
+        0.42307692766189575,
+        0.7051281929016113,
+        0.807692289352417,
+        0.8846153616905212,
+        0.9102563858032227,
+        0.9230769276618958
+      ],
+      "val_loss": [
+        1.8397011756896973,
+        1.1835721731185913,
+        0.8346080183982849,
+        0.5762044191360474,
+        0.4715726673603058,
+        0.366655558347702
+      ],
+      "val_top_3_accuracy": [
+        0.6666666865348816,
+        0.8974359035491943,
+        0.9358974099159241,
+        0.9871794581413269,
+        0.9871794581413269,
+        0.9871794581413269
+      ],
+      "learning_rate": [
+        0.0010000000474974513,
+        0.0010000000474974513,
+        0.0010000000474974513,
+        0.0010000000474974513,
+        0.0010000000474974513,
+        0.0010000000474974513
+      ]
+    },
+    "fine_tuning": {
+      "accuracy": [
+        0.8586956262588501,
+        0.885869562625885,
+        0.8695651888847351,
+        0.8777173757553101
+      ],
+      "loss": [
+        0.5004658102989197,
+        0.42850834131240845,
+        0.46283093094825745,
+        0.3684666156768799
+      ],
+      "top_3_accuracy": [
+        0.9730941653251648,
+        0.97826087474823,
+        0.9646739363670349,
+        0.98097825050354
+      ],
+      "val_accuracy": [
+        0.9358974099159241,
+        0.9487179517745972,
+        0.9358974099159241,
+        0.9358974099159241
+      ],
+      "val_loss": [
+        0.3089812695980072,
+        0.26960688829421997,
+        0.27662453055381775,
+        0.2611205279827118
+      ],
+      "val_top_3_accuracy": [
+        0.9871794581413269,
+        1.0,
+        0.9871794581413269,
+        0.9871794581413269
+      ],
+      "learning_rate": [
+        9.999999747378752e-06,
+        9.999999747378752e-06,
+        9.999999747378752e-06,
+        9.999999747378752e-06
+      ]
+    }
+  },
+  "test_metrics": {
+    "accuracy": 0.8607594966888428,
+    "loss": 0.5582617521286011,
+    "top_3_accuracy": 0.949367105960846
+  }
+}
